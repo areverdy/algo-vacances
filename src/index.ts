@@ -1,28 +1,40 @@
-function getAllDiceCombinations(dices: any[]) {
-  const toCombine = new Array(dices.length).fill("").map((_, i) => i)
-  let combinations: any[] = []
-  let temp: any[] = []
-  let slent = Math.pow(2, toCombine.length) - 1
+console.log('exo.algo')
 
-  for (let i = 0; i < slent; i++) {
-    temp = []
-    for (var j = 0; j < toCombine.length; j++) {
-      if (i & Math.pow(2, j)) {
-        temp.push(toCombine[j])
-      }
-    }
 
-    if (temp.length > 0) {
-      combinations.push(temp)
-    }
-  }
+// Ecrire une fonction qui prend un nombre en paramètre et qui retourne sa factorielle.
+// function factorielle(number:number) {
+    // let variable = 1;
+    // for(let i=1; i <= number; i++) {
+        // (variable *= i)
+    // }
+    // console.log(variable)
+    // return variable
+// }
 
-  return combinations.map((combi) => {
-    const completion = toCombine.filter((index) => combi.indexOf(index) === -1)
-    const diceCombi = combi.map((e) => dices[e])
-    const diceCompletion = completion.map((e) => dices[e])
-    return [diceCombi, diceCompletion]
-  })
+// factorielle(7);
+
+// Ecrire une fonction qui retourne un nombre aléatoire entre 0 et 100.
+// function getRandomNumber(): number {
+    // return Math.floor(Math.random() * 101); // Génère un nombre entre 0 (inclus) et 100 (inclus)
+//   }
+  
+//   const randomNumber = getRandomNumber();
+//   console.log(randomNumber);
+
+const nomsPossibles = [
+    "Amandine", "Benoit", "Cédric", "Dorian", "Emilie", "Fabien",
+    "Géraldine", "Hélène", "Isabelle", "Jérôme", "Karine"
+];
+
+const classe = []; // Tableau pour stocker les noms des élèves
+
+for (let i = 0; i < 16; i++) {
+    const randomIndex = Math.floor(Math.random() * nomsPossibles.length); // Choisit un index aléatoire dans le tableau de noms possibles
+    const nomEleve = nomsPossibles[randomIndex]; // Récupère le nom à cet index
+    classe.push(nomEleve); // Ajoute le nom à la classe
 }
 
-console.log('test fonction', getAllDiceCombinations(["vert", "rouge", "jaune"]))
+console.log(classe);
+
+    
+  
