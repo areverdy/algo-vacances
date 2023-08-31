@@ -1,4 +1,5 @@
 "use strict";
+var _a, _b;
 console.log('exo.algo');
 // Ecrire une fonction qui prend un nombre en paramètre et qui retourne sa factorielle.
 // function factorielle(number:number) {
@@ -27,3 +28,15 @@ for (let i = 0; i < 16; i++) {
     classe.push(nomEleve); // Ajoute le nom à la classe
 }
 console.log(classe);
+const notes = [];
+for (let i = 0; i < 11; i++) {
+    const nomEleve = nomsPossibles[i];
+    const note = Math.floor(Math.random() * 21); // Génère une note aléatoire entre 0 et 20
+    notes.push({ nom: nomEleve, note: note }); // Ajoute le nom de l'élève et sa note au tableau
+}
+console.log(notes);
+let notes2;
+function afficherNotes(noms, notes) {
+}
+console.log((_a = notes.at(0)) === null || _a === void 0 ? void 0 : _a.nom);
+console.log((_b = notes.at(0)) === null || _b === void 0 ? void 0 : _b.note);

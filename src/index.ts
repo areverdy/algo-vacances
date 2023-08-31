@@ -36,5 +36,23 @@ for (let i = 0; i < 16; i++) {
 
 console.log(classe);
 
-    
-  
+const notes = [];
+
+for (let i = 0; i < 11; i++) {
+    const nomEleve = nomsPossibles[i];
+    const note = Math.floor(Math.random() * 21); // Génère une note aléatoire entre 0 et 20
+    notes.push({ nom: nomEleve, note: note }); // Ajoute le nom de l'élève et sa note au tableau
+}
+
+console.log(notes);
+
+let notes2 : number[];
+
+function afficherNotes(noms: string[], notes: number[]): void {
+
+}
+console.log(notes.at(0)?.nom)
+console.log(notes.at(0)?.note)
+
+
+
