@@ -36,3 +36,41 @@ function guessRandomNumber(targetNumber: number, maxAttempts: number): [number |
   } else {
     console.log(`Le nombre n'a pas été trouvé en ${attempts} essais. ${result}`);
   }
+
+  // Créez un tableau d'élèves qui contient un nom aléatoire pour chaque élève.
+const nomsPossibles = [
+  "Amandine", "Benoit", "Cédric", "Dorian", "Emilie", "Fabien",
+  "Géraldine", "Hélène", "Isabelle", "Jérôme", "Karine"
+];
+
+const classe = []; // Tableau pour stocker les noms des élèves
+
+for (let i = 0; i < 16; i++) {
+  const randomIndex = Math.floor(Math.random() * nomsPossibles.length); // Choisit un index aléatoire dans le tableau de noms possibles
+  const nomEleve = nomsPossibles[randomIndex]; // Récupère le nom à cet index
+  classe.push(nomEleve); // Ajoute le nom à la classe
+}
+
+console.log(classe);
+
+// Créez un tableau de notes qui contient une note aléatoire entre 0 et 20 pour chaque élève.
+const notes = [];
+
+for (let i = 0; i < classe.length; i++) {
+  const nomEleve = classe[i];
+  const note = Math.floor(Math.random() * 21); // Génère une note aléatoire entre 0 et 20
+  notes.push({ nom: nomEleve, note: note }); // Ajoute le nom de l'élève et sa note au tableau
+}
+
+console.log(notes);
+// Créez une procédure qui affiche le nom de l'élève et sa note.
+
+let notes2 : number[];
+
+function afficherNotes(noms: string[], notes: number[]): void {
+
+}
+console.log(notes.at(0)?.nom)
+console.log(notes.at(0)?.note)
+
+// Créez une procédure qui affiche un nom d'élève et la note moyenne des élèves qui portent ce prénom.
